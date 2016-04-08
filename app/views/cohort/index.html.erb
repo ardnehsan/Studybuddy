@@ -1,0 +1,9 @@
+<%= render "layouts/header" %>
+
+<%@cohorts.each do |f|%>
+<ul>
+<li><%=f.cohort_name%></li>
+<li><%=f.teacher_name%></li>
+</ul>
+
+<%end%>
