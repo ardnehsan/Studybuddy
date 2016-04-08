@@ -1,11 +1,8 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@font-face{
-  font-family: 'koliko';
-  src: url('koliko-Bold.ttf');
-}
-.container{
 
+//login page
+.container{
   position: relative;
 }
 
@@ -19,7 +16,26 @@
 }
 .container-fluid{
   color: white;
+  display: flex;
+  flex-wrap: nowrap;
 }
+
+.logo{
+  width: 40px;
+  padding-top: 10px;
+}
+
+
+.logo img{
+  width: 40px;
+  length:40px;
+}
+#bs-example-navbar-collapse-1{
+  width: 100%;
+
+  align-content: space-around;
+}
+
 
 .transbox{
   background-color: white;
