@@ -1,16 +1,26 @@
 class CohortController < ApplicationController
 
-def new
-  @cohort = Cohort.new
-end
+  def new
+    @cohort = Cohort.new
+  end
 
-def index
-  @cohorts = Cohort.all
-end
+  def create
+    @cohort = Cohort.new params.require(:cohort).permit(:cohort_name, :teacher_name, :description)
 
-def show
-  @cohort = Cohort.find_by id: params[:id]
-end
+      if @cohort.save
+        redirect_to cohorts_path(id: @cohort.id)
+      else
+        render :new
+      end
+  end
+
+  def index
+    @cohorts = Cohort.all
+  end
+
+  def show
+    @cohort = Cohort.find_by id: params[:id]
+  end
 
 
 end

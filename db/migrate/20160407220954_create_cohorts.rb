@@ -3,7 +3,7 @@ class CreateCohorts < ActiveRecord::Migration
     create_table :cohorts do |t|
         t.string :cohort_name
         t.string :teacher_name
-        t.string :discription
+        t.string :description
       t.timestamps null: false
     end
   end

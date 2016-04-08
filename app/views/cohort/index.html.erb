@@ -1,9 +1,14 @@
 <%= render "layouts/header" %>
+<div class="list">
+
+<h1>Classes List</h1>
 
 <%@cohorts.each do |f|%>
 <ul>
-<li><%=f.cohort_name%></li>
-<li><%=f.teacher_name%></li>
+<%= link_to cohort_path(id: f.id) do %>
+<li><%=f.cohort_name%>, <%=f.teacher_name%></li>
+<%end%>
 </ul>
 
 <%end%>
+</div>
