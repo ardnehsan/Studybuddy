@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   post 'sign_in' => 'sessions#create'
   delete 'sign_in' => 'sessions#delete', as: :sign_out
 
+  get 'cohorts/new' => 'cohort#new', as: :new_cohort
   get 'cohort/:id' => 'cohort#show', as: :cohort
-  get '/cohorts' => 'cohort#index', as: :cohorts
-  get 'newcohorts' => 'cohort#new', as: :new
-  post '/cohorts' => 'cohorts#create'
+  get 'cohorts' => 'cohort#index', as: :cohorts
+  post 'cohorts' => 'cohort#create'
 
   root 'users#home'
 end
