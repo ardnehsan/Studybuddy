@@ -1,0 +1,5 @@
+<%=render "layouts/header"%>
+<% @cohort.entries.each do |entry| %>
+  <%= entry.word%>
+  <br>
+<% end %>

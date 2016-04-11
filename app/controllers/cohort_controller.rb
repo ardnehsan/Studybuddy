@@ -22,5 +22,9 @@ class CohortController < ApplicationController
     @cohort = Cohort.find_by id: params[:id]
   end
 
+  def encyclopedia
+    @cohort = Cohort.find_by id: params[:id]
+  end
+
 
 end
