@@ -3,4 +3,4 @@
 <h4><%= @cohort.teacher_name%></h4>
 <h6><%= @cohort.description%></h6>
 
-<%= link_to "Encyclopedia", encyclopedia_path%>
+<%= link_to "Encyclopedia", encyclopedia_path(cohort_id: @cohort.id)%>

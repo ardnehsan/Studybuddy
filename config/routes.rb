@@ -10,10 +10,9 @@ Rails.application.routes.draw do
 
   get 'cohorts/new' => 'cohort#new', as: :new_cohort
   get 'cohort/:id' => 'cohort#show', as: :cohort
+  get 'cohort/:id/entries' => 'cohort#encyclopedia', as: :encyclopedia
   get 'cohorts' => 'cohort#index', as: :cohorts
   post 'cohorts' => 'cohort#create'
-
-  get 'encyclopedias' => 'encyclopedia#index', as: :encyclopedia
 
   root 'users#home'
 end

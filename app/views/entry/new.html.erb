@@ -1,0 +1,10 @@
+<%= render "layouts/header" %>
+
+<h1>Add an Entry!</h1>
+
+<%= simple_form_for @entry do |f| %>
+  <%= f.input :cohort_name %>
+  <%= f.input :teacher_name %>
+  <%= f.input :description %>
+  <%= f.button :submit  %>
+<% end %>

@@ -1,44 +1,45 @@
 <%= render "layouts/header" %>
 
-<h1>Classes</h1>
+ <div class="panel panel-default">
+   <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+   <div class="panel-heading">Find Your Class!</div>
 
-<div class="col-lg-6">
-   <div class="input-group">
-     <input type="text" class="form-control" placeholder="Search for...">
-     <span class="input-group-btn">
-       <button class="btn btn-default" type="button">Go!</button>
-     </span>
-   </div><!-- /input-group -->
- </div><!-- /.col-lg-6 -->
-
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>
-        Class
-      </th>
-      <th>
-        Teacher
-      </th>
-      <th>
-        Details
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @cohorts.each do |cohort| %>
-      <tr>
-        <td>
-          <%= cohort.cohort_name %>
-        </td>
-        <td>
-          <%= cohort.teacher_name %>
-        </td>
-        <td>
-          <%= link_to "View Details", cohort_path(id: cohort.id) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+   <!-- Table -->
+   <table class="table">
+     <thead>
+       <tr>
+         <th>
+           Class
+         </th>
+         <th>
+           Teacher
+         </th>
+         <th>
+           Details
+         </th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @cohorts.each do |cohort| %>
+         <tr>
+           <td>
+             <%= cohort.cohort_name %>
+           </td>
+           <td>
+             <%= cohort.teacher_name %>
+           </td>
+           <td>
+             <%= link_to "View Details", cohort_path(id: cohort.id) %>
+           </td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
+ </div>
