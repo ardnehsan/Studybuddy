@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get 'cohorts' => 'cohort#index', as: :cohorts
   post 'cohorts' => 'cohort#create'
 
+  get 'encyclopedias' => 'encyclopedia#index', as: :encyclopedia
+
   root 'users#home'
 end
