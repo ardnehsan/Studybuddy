@@ -1,13 +1,14 @@
 <%= render "layouts/header" %>
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">My Classes</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">My Achievements</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Settings</button>
-  </div>
+    <a href="#" class="btn btn-default">My Classes</a>
+    <a href="#" class="btn btn-default">My Achievements</a>
+    <a href="#" class="btn btn-default">Settings</a>
 </div>
+
+  <div class="profilepic">
+
+    <%= image_tag attachment_url(@current_user, :photo, :fill, 300, 300, format: "jpg") %>
+
+  </div>
+
 </div>

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    @user = User.new params.require(:user).permit(:username, :email, :password, :password_confirmation, :photo)
       if @user.save
         session[:user_id] = @user.id
         redirect_to root_path
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def home
-
+    @current_user = User.find_by id: session[:user_id]
   end
 
 end
