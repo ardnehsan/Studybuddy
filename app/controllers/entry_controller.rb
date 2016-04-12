@@ -1,16 +1,16 @@
 class EntryController < ApplicationController
 
-  def new_entry
+  def new
     @entry = Entry.new
 
   end
 
-  def create_entry
+  def create
     @cohort = Cohort.find_by id: params[:id]
     @entry = Entry.new params.require(:entry).permit(:word, :definition)
     @entry.cohort_id = @cohort.id
       if @entry.save
-        redirect_to entry_path(:@entry.id)
+        redirect_to entries_path(id: @cohort.id)
       else
         render :new
       end

@@ -2,11 +2,35 @@
 @import 'bootstrap';
 
 //login page
+
+.navbar-inverse{
+  background-color: #404040;
+  border-color: #404040;
+
+}
+
 .container{
   position: relative;
-  background-color: #98dafc;
   width: 100%;
   height: 800px;
+  display: inline-block;
+  color:#404040;
+}
+
+li{
+  color: #FFD900;
+
+}
+
+#bs-example-navbar-collapse-1 > ul > li:nth-child(1) > p{
+  color: #FFD900;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #00CCD6;
 }
 
 .image{

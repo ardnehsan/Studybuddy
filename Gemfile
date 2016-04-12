@@ -50,3 +50,9 @@ end
   gem 'bootstrap-sass'
 
   gem 'faker'
+
+  gem "refile-mini_magick"
+
+  gem "refile", require: "refile/rails"
+
+  gem "refile-postgres"
