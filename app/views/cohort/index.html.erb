@@ -27,6 +27,15 @@
          <tr>
            <td>
              <%= cohort.cohort_name %>
+             <small>
+                 <% if cohort.students.find_by(user_id: @current_user.id, cohort_id: cohort.id) %>
+                   (current student) |
+                   <%= link_to "leave class", leave_cohort_path(id: cohort.id), method: :delete %>
+                 <% else %>
+                   <%= link_to "join class", join_cohort_path(id: cohort.id), method: :post  %>
+                 <% end %>
+               </small>
+
            </td>
            <td>
              <%= cohort.teacher_name %>

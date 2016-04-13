@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get 'cohorts' => 'cohort#index', as: :cohorts
   post 'cohorts' => 'cohort#create'
 
+  post 'cohorts/join/:id' => 'cohort#join_cohort', as: :join_cohort
+  delete 'cohorts/leave/:id' => 'cohort#leave_cohort', as: :leave_cohort
+
   get 'cohort/:id/entry/new' => 'entry#new', as: :new_entry
   post 'cohort/:id/entries' => 'entry#create'
   get 'cohort/:id/entry/:id' => 'entry#show', as: :entry

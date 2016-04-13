@@ -1,7 +1,8 @@
 <%= render "layouts/header" %>
 
-<h1><%= @entry.word%></h1>
+<section class="paper">
+ <article class="head"></article>
+ <h1><%= @entry.word%></h1>
+   <%= @entry.definition%>
 
-<p>
-  <%= @entry.definition%>
-</p>
+</section>

@@ -5,19 +5,15 @@
     <a href="#" class="btn btn-default">Settings</a>
 </div>
 
-<div class="stuff">
-
-        <div class="profilepic">
-
+    <div class="quote-container">
+        <i class="pin"></i>
+        <blockquote class="note yellow">
           <%= image_tag attachment_url(@current_user, :photo, :fill, 300, 300, format: "jpg"), class:"img-circle"%>
-          <br>
-          <br>
-          <%= @current_user.username %>
-          <br>
-          <br>
-          <%= @current_user.email %>
-        </div>
-
-
-
+            <br>
+          <cite class="author">
+            <%= @current_user.username %>
+            <br>
+            <%= @current_user.email %>
+          </cite>
+        </blockquote>
     </div>
