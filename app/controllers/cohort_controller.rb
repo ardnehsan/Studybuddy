@@ -16,6 +16,11 @@ class CohortController < ApplicationController
 
   def index
     @cohorts = Cohort.all
+    if params[:search]
+    @cohorts = Cohort.search(params[:search]).order("created_at DESC")
+  else
+    @cohorts = Cohort.all.order('created_at DESC')
+  end
   end
 
   def show

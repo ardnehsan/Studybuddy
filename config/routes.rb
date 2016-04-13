@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'cohort/:id/entry/new' => 'entry#new', as: :new_entry
   post 'cohort/:id/entries' => 'entry#create'
-
+  get 'cohort/:id/entry/:id' => 'entry#show', as: :entry
 
 
   root 'users#home'

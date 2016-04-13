@@ -1,7 +1,11 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'users.scss';
 
 //login page
+
+
+
 
 .navbar-inverse{
   background-color: #404040;
@@ -15,6 +19,7 @@
   height: 800px;
   display: inline-block;
   color:#404040;
+
 }
 
 li{
