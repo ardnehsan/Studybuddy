@@ -1,6 +1,8 @@
 <%=render "layouts/header"%>
 <% @cohort.entries.each do |entry| %>
+  <%= link_to entry_path(id: entry.id) do %>
   <%= entry.word%>
+  <%end%>
   <br>
 <% end %>
 <%= link_to "New Entry", new_entry_path %>

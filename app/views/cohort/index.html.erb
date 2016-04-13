@@ -1,18 +1,14 @@
 <%= render "layouts/header" %>
 
- <div class="panel panel-default">
-   <div class="col-lg-6">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-   <div class="panel-heading">Find Your Class!</div>
+
+
+   <%= form_tag(cohorts_path, :method => "get", id: "search-form") do %>
+ <%= text_field_tag :search, params[:search], placeholder: "Find your class!" %>
+ <%= submit_tag "Search", :name => nil %>
+<% end %>
 
    <!-- Table -->
-   <table class="table">
+   <table class="table table-striped">
      <thead>
        <tr>
          <th>
@@ -42,4 +38,3 @@
        <% end %>
      </tbody>
    </table>
- </div>

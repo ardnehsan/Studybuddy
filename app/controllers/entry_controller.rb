@@ -16,6 +16,10 @@ class EntryController < ApplicationController
       end
   end
 
+  def show
+    @entry = Entry.find_by id: params[:id]
+  end
+
   def create_comment
     @entry = Entry.find_by id: params[:id]
     @comment = Comment.new

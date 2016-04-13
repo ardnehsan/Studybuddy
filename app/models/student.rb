@@ -1,0 +1,6 @@
+class Student < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :cohort
+
+  validates :user, :cohort, presence: true
+end

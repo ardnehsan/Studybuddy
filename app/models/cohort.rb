@@ -1,6 +1,11 @@
 class Cohort < ActiveRecord::Base
   validates :cohort_name, :teacher_name, presence: true
-  belongs_to :user
-  has_many :users
+
+  has_many :students
+  has_many :users, through :students
   has_many :entries
+
+  def self.search(query)
+  where("cohort_name like ?", "%#{query}%")
+end
 end
