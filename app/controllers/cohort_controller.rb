@@ -27,6 +27,26 @@ class CohortController < ApplicationController
     @cohort = Cohort.find_by id: params[:id]
   end
 
+  def join_cohort
+    @cohort = Cohort.find_by id: params[:id]
+    student = Student.new
+    student.user = @current_user
+    student.cohort = @cohort
+
+      if student.save
+        redirect_to home_path
+      else
+        redirect_to entries_path
+      end
+    end
+
+  def leave_cohort
+    @cohort = Cohort.find_by id: params[:id]
+    student = Student.find_by(user_id: @current_user.id)
+    student.destroy
+    redirect_to home_path
+  end
+
   def entries
     @cohort = Cohort.find_by id: params[:id]
   end
