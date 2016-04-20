@@ -25,12 +25,12 @@ class EntryController < ApplicationController
 
     @comment.content = params[:comment][:content]
     @comment.entry_id = @entry.id
-    @comment.user_id = @user.id
+    @comment.user_id = @current_user.id
 
       if @comment.save
         redirect_to entry_path(id: @entry.id)
       else
-        render :index
+        render :entries
       end
   end
 

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'cohort/:id/entry/new' => 'entry#new', as: :new_entry
   post 'cohort/:id/entries' => 'entry#create'
   get 'cohort/:id/entry/:id' => 'entry#show', as: :entry
+  post 'cohort/:id/entry/:id/comments' => 'entry#create_comment', as: :comments
 
 
   get 'cohort/:id/cards' => 'cohort#cards', as: :cards
