@@ -1,0 +1,19 @@
+<%= render "layouts/header" %>
+
+<h1>Class Flashcards</h1>
+  <% @cohort.cards.each do |card| %>
+
+    <div class="flip-card">
+      <div class="flip-front">
+        <%=card.front%>
+      </div>
+
+      <div class="flip-back">
+        <%=card.back%>
+      </div>
+
+  <br>
+
+  <%end%>
+
+  </div>
