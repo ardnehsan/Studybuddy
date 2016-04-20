@@ -1,0 +1,9 @@
+<%= render "layouts/header" %>
+
+<h1>Make a Card!</h1>
+
+<%= simple_form_for @card do |f| %>
+  <%= f.input :front %>
+  <%= f.input :back %>
+  <%= f.button :submit  %>
+<% end %>

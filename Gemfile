@@ -58,3 +58,7 @@ end
   gem "refile-postgres"
 
   gem 'react-rails', '~> 1.0'
+
+  gem 'kaminari'
+
+  gem 'kaminari-bootstrap'
