@@ -4,6 +4,7 @@ class Cohort < ActiveRecord::Base
   has_many :students
   has_many :users, through: :students, dependent: :destroy
   has_many :entries
+  has_many :cards
 
   def self.search(query)
   where("cohort_name like ?", "%#{query}%")

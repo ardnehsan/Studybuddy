@@ -19,6 +19,27 @@ class UsersController < ApplicationController
 
   def home
     @current_user = User.find_by id: session[:user_id]
+    student = Student.find_by id: @current_user.id
+  
+  end
+
+  def join_cohort
+    @cohort = Cohort.find_by id: params[:id]
+    student = Student.new
+    @current_user = student.user
+    @student.cohort = student.cohort
+      if student.save
+        redirect_to home_path
+      else
+        redirect_to entries_path
+      end
+    end
+
+  def leave_cohort
+    @cohort = Cohort.find_by id: params[:id]
+    student = Student.find_by(user_id: @current_user.id)
+    student.destroy
+    redirect_to home_path
   end
 
 end

@@ -1,8 +1,12 @@
 <%= render "layouts/header" %>
 
+<div class="image">
 <section class="paper">
+  <i class="pin"></i>
  <article class="head"></article>
+ <%= link_to root_path do %><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span><% end %>
  <h1><%= @entry.word%></h1>
    <%= @entry.definition%>
 
 </section>
+</div>

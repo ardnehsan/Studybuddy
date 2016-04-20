@@ -1,6 +1,10 @@
 <%=render "layouts/header"%>
 
+<div class="image">
+
+
 <section class="paper">
+    <i class="pin"></i>
  <article class="head"></article>
  <% @cohort.entries.each do |entry| %>
    <%= link_to entry_path(id: entry.id) do %>
@@ -10,3 +14,5 @@
  <% end %>
  <%= link_to new_entry_path do %><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><% end %>
 </section>
+
+</div>

@@ -51,5 +51,8 @@ class CohortController < ApplicationController
     @cohort = Cohort.find_by id: params[:id]
   end
 
+  def cards
+    @cohort = Cohort.find_by id: params[:id]
+  end
 
 end

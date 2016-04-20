@@ -1,9 +1,7 @@
 <%= render "layouts/header" %>
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-    <a href="#" class="btn btn-default">My Classes</a>
-    <a href="#" class="btn btn-default">My Achievements</a>
-    <a href="#" class="btn btn-default">Settings</a>
-</div>
+
+<div class="image">
+
 
     <div class="quote-container">
         <i class="pin"></i>
@@ -17,3 +15,16 @@
           </cite>
         </blockquote>
     </div>
+
+    <div class="list">
+
+
+    <% @current_user.cohorts.each do |cohort| %>
+    <%= link_to cohort_path(id: cohort.id) do %>
+        <%=cohort.cohort_name %>
+        <br>
+        <%end%>
+    <%end%>
+</div>
+
+</div>
