@@ -1,44 +1,37 @@
-.flip-card {
-	height: 200px;
-	width: 300px;
-	transform: perspective(400px) rotateY(0deg);
-	-moz-transform: perspective(400px) rotateY(0deg);
-	-webkit-transform: perspective(400px) rotateY(0deg);
-	-o-transform: perspective(400px) rotateY(0deg);
-	-ms-transform: perspective(400px) rotateY(0deg);
-	transition: all ease 0.2s;
-	-moz-transition: all ease 0.2s;
-	-webkit-transition: all ease 0.2s;
-	-o-transition: all ease 0.2s;
-	-ms-transition: all ease 0.2s;
-}
-.flip-card .flip-front {
 
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-  background-color: #FFD900;
-  font-size: 28px;
+.stage {
+  border: 1px solid gray;
+ -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
+
 }
 
-.flip-card .flip-back {
-	height: 100%;
-	width: 100%;
-  background-color: #FFD900;
+.flashcard {
+  background-color: white;
+  height: 200px;
+  width: 350px;
+  margin: 10% auto;                                              /* Centers the flashcard on the page */
+  border: 1px solid gray;                            /*  Border makes the animation easier to see. */
+  box-shadow: 2px 2px 2px #000;
+  -webkit-transform-style: preserve-3d;                                 /* Provides 3D perspective. */
+  transition: all 0.3s;                                /* Slows down any transitions (e.g. rotation) */
+  -webkit-transition: all 0.3s;
 }
-.flip-card:hover {
-	transform: perspective(400px) rotateY(180deg);
-	-moz-transform: perspective(400px) rotateY(180deg);
-	-webkit-transform: perspective(400px) rotateY(180deg);
-	-o-transform: perspective(400px) rotateY(180deg);
-	-ms-transform: perspective(400px) rotateY(180deg);
+
+.flipped, .back {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);                      /* Rotates flashcard div when applied */
 }
-.flip-card:hover .flip-back {
-	transform: perspective(400px) rotateY(-180deg);
-	-moz-transform: perspective(400px) rotateY(-180deg);
-	-webkit-transform: perspective(400px) rotateY(-180deg);
-	-o-transform: perspective(400px) rotateY(-180deg);
-	-ms-transform: perspective(400px) rotateY(-180deg);
+
+.front, .back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;           /*  Hides back side of text (it's upside down) */
+  height: 200px;                                   /* Stretches side to inhabit full size of flashcard */
+  width: 350px;
+  text-align: center;
+}
+
+.front p, .back p {
+  margin-top: 25%;
+  font-size: 1em;
+	font-family: 'Schoolbell', cursive;
 }

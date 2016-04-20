@@ -49,10 +49,12 @@ class CohortController < ApplicationController
 
   def entries
     @cohort = Cohort.find_by id: params[:id]
+    @entries = Entry.order("word").page(params[:page]).per(5)
   end
 
   def cards
     @cohort = Cohort.find_by id: params[:id]
+    @cards = Card.order("front").page(params[:page]).per(5)
   end
 
 end

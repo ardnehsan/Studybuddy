@@ -1,19 +1,21 @@
 <%= render "layouts/header" %>
 
-<h1>Class Flashcards</h1>
-  <% @cohort.cards.each do |card| %>
+<%= link_to cohort_path(cohort_id: @cohort.id)do %><span class="glyphicon glyphicon-apple" aria-hidden="true"></span><% end %>
+<%= link_to new_card_path(cohort_id: @cohort.id)do %><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><% end %>
 
-    <div class="flip-card">
-      <div class="flip-front">
-        <%=card.front%>
+<div class="image">
+
+  <div class="stage">
+    <% @cohort.cards.each do |card| %>
+      <div class="flashcard">
+        <div class="front">
+          <p><%=card.front%></p>
+        </div>
+        <div class="back">
+          <p><%=card.back%></p>
+        </div>
       </div>
+      <%end%>
+    </div>
 
-      <div class="flip-back">
-        <%=card.back%>
-      </div>
-
-  <br>
-
-  <%end%>
-
-  </div>
+</div>
