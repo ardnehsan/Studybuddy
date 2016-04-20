@@ -11,7 +11,7 @@
     <%= link_to "Encyclopedia", entries_path(cohort_id: @cohort.id)%>
   </li>
   <li>
-    <%= link_to "Flashcards", cards_path(cohort_id: @cohort.id)%>
+    <%= link_to "Flashcards", cards_path(cohort_id: @cohort.id), :"data-no-turbolink" => true %>
   </li>
 
 </ul>
