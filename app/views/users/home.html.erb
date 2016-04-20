@@ -16,15 +16,15 @@
         </blockquote>
     </div>
 
-    <div class="list">
 
-
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">My Classes</button>
+  <div id="myDropdown" class="dropdown-content">
     <% @current_user.cohorts.each do |cohort| %>
-    <%= link_to cohort_path(id: cohort.id) do %>
-        <%=cohort.cohort_name %>
-        <br>
-        <%end%>
+          <li><%= link_to cohort_path(id: cohort.id) do %><%=cohort.cohort_name %></li>
+      <%end%>
     <%end%>
+  </div>
 </div>
 
 </div>

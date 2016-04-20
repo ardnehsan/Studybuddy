@@ -4,9 +4,30 @@
 <section class="paper">
   <i class="pin"></i>
  <article class="head"></article>
- <%= link_to root_path do %><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span><% end %>
+ <%= link_to entries_path do %><span class="glyphicon glyphicon-left" aria-hidden="true"></span><% end %>
+
  <h1><%= @entry.word%></h1>
    <%= @entry.definition%>
 
+     <div class="">
+     <ul>
+       <% @entry.comments.order("id desc").each do |comment| %>
+       <li>
+         <%= comment.content %> - <%= comment.user_id %>
+       <% end %>
+     </ul>
+     </div>
+     <div>
+     <%= form_for Comment.new do |h| %>
+
+             <%= h.label :comment%>
+             <%= h.text_area :content%>
+
+           <div>
+             <%= h.submit %>
+           </div>
+         <% end %>
+      </div>
 </section>
+
 </div>
