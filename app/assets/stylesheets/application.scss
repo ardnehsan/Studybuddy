@@ -4,12 +4,13 @@
 @import 'entry.scss';
 @import 'cohort.scss';
 @import 'cards.scss';
+@import 'sessions.scss';
 
 //login page
 
 .navbar-inverse{
-  background-color: #404040;
-  border-color: #404040;
+  background-color: #609194;
+  border-color: #609194;
 }
 
 .container{
@@ -18,6 +19,8 @@
   height: 800px;
   display: inline-block;
   color:#404040;
+  font-family: "Signika", sans-serif;
+  background-color: #92DCE0;
 }
 
 li{
@@ -25,7 +28,7 @@ li{
 }
 
 #bs-example-navbar-collapse-1 > ul > li:nth-child(1) > p{
-  color: #FFD900;
+  color: #EF9950;
 }
 
 body {
@@ -42,7 +45,7 @@ body {
      height: 720px;
      padding:20px;
      border:1px solid #021a40;
-     
+
 }
 
 .container-fluid{

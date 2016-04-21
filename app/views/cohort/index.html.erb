@@ -1,9 +1,6 @@
 <%= render "layouts/header" %>
 
 
-
-<div class="image">
-
    <%= form_tag(cohorts_path, :method => "get", id: "search-form") do %>
  <%= text_field_tag :search, params[:search], placeholder: "Find your class!" %>
  <%= submit_tag "Search", :name => nil %>   <%= link_to new_cohort_path do %><span class="glyphicon glyphicon-plus" aria-hidden="true"></span><% end %>
@@ -48,4 +45,3 @@
        <% end %>
      </tbody>
    </table>
-</div>

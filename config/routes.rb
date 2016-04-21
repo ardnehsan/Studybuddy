@@ -28,5 +28,10 @@ Rails.application.routes.draw do
   get 'cohort/:id/card/new' => 'card#new', as: :new_card
   post 'cohort/:id/cards' => 'card#create'
 
+
+  get 'cohort/:id/messages' => 'cohort#messages', as: :messages
+  post 'cohort/:id/messages' => 'message#create'
+
+
   root 'users#home'
 end

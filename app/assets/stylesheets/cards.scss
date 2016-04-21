@@ -1,20 +1,22 @@
 
 .stage {
-  border: 1px solid gray;
- -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
 
+ -webkit-perspective: 1000;                   /* Sets up your viewpoint for seeing the animation */
+ overflow: scroll;
+ height: 500px;
 }
 
 .flashcard {
-  background-color: white;
+
   height: 200px;
   width: 350px;
-  margin: 10% auto;                                              /* Centers the flashcard on the page */
+  margin: 20% auto;                                              /* Centers the flashcard on the page */
   border: 1px solid gray;                            /*  Border makes the animation easier to see. */
   box-shadow: 2px 2px 2px #000;
   -webkit-transform-style: preserve-3d;                                 /* Provides 3D perspective. */
   transition: all 0.3s;                                /* Slows down any transitions (e.g. rotation) */
   -webkit-transition: all 0.3s;
+
 }
 
 .flipped, .back {
@@ -23,6 +25,7 @@
 }
 
 .front, .back {
+  background-color: white;
   position: absolute;
   -webkit-backface-visibility: hidden;           /*  Hides back side of text (it's upside down) */
   height: 200px;                                   /* Stretches side to inhabit full size of flashcard */
@@ -33,5 +36,4 @@
 .front p, .back p {
   margin-top: 20%;
   font-size: 1em;
-	font-family: 'Schoolbell', cursive;
 }

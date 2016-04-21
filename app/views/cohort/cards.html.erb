@@ -7,13 +7,13 @@
 
   <div class="stage">
     <% @cohort.cards.each do |card| %>
-      <div class="flashcard">
-        <div class="front">
-          <p><%=card.front%></p>
-        </div>
-        <div class="back">
-          <p><%=card.back%></p>
-        </div>
+        <div class="flashcard">
+          <div class="front">
+            <p><%=card.front%></p>
+          </div>
+          <div class="back">
+            <p><%=card.back%></p>
+          </div>
       </div>
       <%end%>
     </div>
